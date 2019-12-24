@@ -479,6 +479,7 @@ Polymer({
     }
     this._pointsObserver = new MutationObserver(this._buildPathFromPoints.bind(this));
     this._pointsObserver.observe(this, {
+      childList: true,
       subtree: true,
       attributes: true,
     });
